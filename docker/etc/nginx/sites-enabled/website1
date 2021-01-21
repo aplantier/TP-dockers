@@ -1,11 +1,6 @@
 server {
-	listen 80 default_server;
-	listen [::]:80 default_server;
+	listen 81;
 	root /opt/www/website1;
-	index index.tml
-	server_name _;
-	location / {
-		try_file $uri $uri/ =404;
-	}
-
+	index index.html;
+	location / { } 
 }
