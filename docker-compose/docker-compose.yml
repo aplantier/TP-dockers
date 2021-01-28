@@ -3,17 +3,19 @@
 version: "3.3"
 
 services: 
-  php:
+  back:
     image: php:7-fpm
     container_name: back
+    volumes:
+      - /home/data/sigd/GenLog/td/JCremoni/dockers/nginx/docker/opt/www/website1/index.php:/opt/www/website1/index.php
     ports:
       - "9000:9000"
   nginx:
     build:
-      context: ../nginx/
+      context: /home/data/sigd/GenLog/td/JCremoni/dockers/nginx
       dockerfile: Dockerfile
     depends_on: 
-      - php
+      - back
     ports:
       - "8080:81"
 

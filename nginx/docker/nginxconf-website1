@@ -1,6 +1,6 @@
 server {
-	#listen 80 default_server;
-	#listen [::]:80 default_server;
+	listen 80 default_server;
+	listen [::]:80 default_server;
 	listen 81;
 	root /opt/www/website1;
 	index index.tml index.php
