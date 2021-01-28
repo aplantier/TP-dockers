@@ -1,0 +1,19 @@
+---
+
+version: "3.3"
+
+services: 
+  php:
+    image: php:7-fpm
+    container_name: back
+    ports:
+      - "9000:9000"
+  nginx:
+    build:
+      context: ../nginx/
+      dockerfile: Dockerfile
+    depends_on: 
+      - php
+    ports:
+      - "8080:81"
+

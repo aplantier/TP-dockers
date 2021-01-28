@@ -6,3 +6,5 @@ Module TELEDAM11
 Création du fichier dockerfile 
 
 Image ubuntu:latest
+
+[[imagenginx8080]]
